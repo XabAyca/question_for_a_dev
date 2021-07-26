@@ -43,11 +43,25 @@ footer{
 #questions{
   margin-top: 100px;
   text-align: center;
+  position: relative;
+}
+#questions div{
+ position:absolute;
+ transition: 500ms;
 }
 
 /***************** Section answers  ********************/
 #answers{
   margin-top: 100px;
+  position: relative;
+}
+.block-answer{
+  position: absolute;
+  top:150px;
+  width:70%;
+  left:15%;
+  right: 15%;
+  transition: 500ms;
 }
 .answer-list{
   display: flex;
@@ -108,7 +122,8 @@ footer{
 
 /***************** hidden ********************/
 .hidden{
-  display: none;
+  transform:translate(-150vh);
+  visibility: hidden;
 }
 
 /***************** End ********************/

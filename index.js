@@ -63,8 +63,8 @@ turns = (questions,select) =>{
   
   const question   = document.getElementById(`question0`)
   const answers    = document.getElementById(`answers0`)
-  question.style.display='block'
-  answers.style.display='block'
+  question.classList.remove('hidden')
+  answers.classList.remove('hidden')
 }
 
 arrayShuffle = (array) => {
@@ -94,10 +94,10 @@ nextTurn = (event)=>{
       const beforeQuestion = document.getElementById(`question${turn-1}`)
       const beforeAnswers = document.getElementById(`answers${turn-1}`)
       title.innerHTML = `<h1>Questions ${turn+1}/${select}</h1>`;
-      beforeAnswers.style.display='none';
-      beforeQuestion.style.display='none';
-      answers.style.display = 'block'
-      question.style.display = 'block'
+      beforeAnswers.classList.add('hidden');
+      beforeQuestion.classList.add('hidden');
+      answers.classList.remove('hidden');
+      question.classList.remove('hidden');
     }
   },1000)
 }
